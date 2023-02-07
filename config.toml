@@ -18,7 +18,6 @@ disqusShortname = "yourdiscussshortname"
   description = "Guilherme Beira's personal website"
   keywords = "blog,developer,personal"
   avatarurl = "images/profile.jpeg"
-  #gravatar = "john.doe@example.com"
 
   favicon_32 = "/images/favicon_io/favicon-32x32.png"
   favicon_16 = "/images/favicon_io/favicon-16x16.png"
