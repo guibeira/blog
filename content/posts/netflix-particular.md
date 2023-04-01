@@ -6,7 +6,7 @@ description = "Armazene e transmita seu próprio conteúdo de mídia"
 slug = "netflix-particular"
 authors = ['guilherme']
 tags = ["docker"]
-categories = ["movies"]
+categories = []
 externalLink = ""
 series = []
 +++
@@ -16,7 +16,7 @@ series = []
 
 Que a Netflix é um excelente serviço todos sabemos, mas nem sempre temos acesso exatamente ao filme que queremos. Com isso assinamos outro serviço apenas para assistir aquela série que só está disponível naquela outra plataforma.  No final do mês acabamos assinando trocentos serviços e raramente voltamos para ver o que tem de novo, mas o pior na minha experiência é conseguir achar o filme e então perceber que tem que alugar para assistir 🤡.
 
-Não seria interessante ter uma maneira que podermos ter nosso próprio serviço de streaming? De preferencia usando tecnologias open-source? Algo que contemplasse as seguintes features:
+Não seria interessante ter uma maneira de podermos ter nosso próprio serviço de streaming? De preferencia usando tecnologias open-source? Algo que contemplasse as seguintes features:
 
 - [ ]  Acesso por vários dispositivos
 - [ ]  Busca por filmes e caso não encontre baixa de forma automática.
@@ -33,13 +33,13 @@ Temos várias features necessárias, por isso quebraremos elas em pequenas coisa
 {{< figure src="/images/media_server/jellyfin.png" alt="" >}}
 
 
-Uma iniciativa open-source ótima, mas para meu caso de uso sinto falta uma feature que é essencial. A falta de aplicativos para TVs e videos games é algo que realmente me incomoda, ninguém merece ter que plugar um computador na sala , configurar a saída do áudio para TV, controlar com um mouse sem fio e ter que ficar levantando para operar, quero uma experiencia mais próxima da netflix possível.
+Uma iniciativa open-source ótima, mas para meu caso de uso sinto falta uma feature que é essencial. A falta de aplicativos para TVs e videos games é algo que realmente me incomoda, ninguém merece ter que plugar um computador na sala, configurar a saída do áudio para TV, controlar com um mouse sem fio e ter que ficar levantando para operar, quero uma experiência mais próxima da netflix possível.
 
 Tendo em mente esses requisito temos a opção de usar o [plex](https://www.plex.tv). 
 
 {{< figure src="/images/media_server/plex.png" alt="" >}}
 
-Não é open source, mas é gratuito, tendo opções de assinatura se desejar ter acesso a outras features que entrarei em detalhes adiante.  Como a imagem acima mostra “Watch anytime, anywhere with the Plex app”, e isso é exatamente o que procuro, uma forma de poder iniciar uma série no computador, terminar na TV da sala, ou no video game. Sendo assim Plex será nossa escolha.
+Não é open source, mas é gratuito, tendo opções de assinatura se desejar ter acesso a outras features que entrarei em detalhes adiante. Como a imagem acima mostra “Watch anytime, anywhere with the Plex app”, e isso é exatamente o que procuro, uma forma de poder iniciar uma série no computador, terminar na TV da sala, ou no videogame. Sendo assim Plex será nossa escolha.
 
 ### Buscar
 
@@ -53,11 +53,11 @@ Logo, temos uma alternativa que fazer uma lista de todos os indexadores de torre
 
 {{< figure src="/images/media_server/jacket.png" alt="" >}}
 
-Nele você pode adicionar e vários indexadores de torrent e procurar em apenas um único lugar. O que ele faz é entrar nesses sites fazer a busca e te retornar os resultados. Apenas isso salva muito, mas muito tempo, invés de ter que ficar visitando site por site atrás do que quer. Mas nem tudo é perfeito, muitos desses indexadores usam tecnologias de captcha para evitar uso de robos (que é exatamente o que estamos fazendo). 
+Nele você pode adicionar e vários indexadores de torrente e procurar em apenas um único lugar. O que ele faz é entrar nesses sites fazer a busca e te retornar os resultados. Apenas isso salva muito, mas muito tempo, invés de ter que ficar visitando site por site atrás do que quer. Mas nem tudo é perfeito, muitos desses indexadores usam tecnologias de captcha para evitar uso de robôs (que é exatamente o que estamos fazendo).
 
 {{< figure src="/images/media_server/not_robot.png" alt="" >}}
 
-Desse modo pode acontecer das suas pesquisas falharem, pois será necessário validar que o robozinho do jacket é um humano. Felizmente temos um modo de contornar isso usando o [FlareSolverr](https://github.com/FlareSolverr/FlareSolverr)
+Desse modo pode acontecer das suas pesquisas falharem, pois será necessário validar que o robozinho do jacket é um humano. Felizmente temos um modo de contornar isso usando o [FlareSolverr](https://github.com/FlareSolverr/FlareSolverr).
 
 {{< figure src="/images/media_server/flareSolverr.png" alt="" >}}
 
@@ -73,11 +73,11 @@ E para filmes o [Radarr](https://github.com/Radarr/Radarr)
 
 {{< figure src="/images/media_server/radarr.png" alt="" >}}
 
-Os dois são muito parecidos e funcionam da mesma maneira. Basicamente fazem busca apenas por nomes e trazem todos os meta dados. Desse modo quando você adiciona um novo filme ele sabe dizer se o filme apenas foi anunciado, se já esta nos cinemas, ou se já foi lançado. 
+Os dois são muito parecidos e funcionam da mesma maneira. Basicamente fazem busca apenas por nomes e trazem todos os meta dados. Desse modo, quando você adiciona um novo filme, ele sabe dizer se o filme apenas foi anunciado, se já esta nos cinemas, ou se já foi lançado
 
 {{< figure src="/images/media_server/radarr_calendar.png" alt="" >}}
 
-O mesmo acontece com o Sonnar, mas especifico para séries obviamente.
+O mesmo acontece com o Sonnar, mas especifico para séries, obviamente.
 
 {{< figure src="/images/media_server/sonarr_calendar.png" alt="" >}}
 
@@ -87,9 +87,9 @@ Dessa maneira temos um modo de monitorar e saber quando o filme/serie estará di
 
 Agora que temos todos os softwares necessários, devemos de alguma maneira ligar todos eles. Nesse ponto explicarei como inicializar usando sistema linux e contêineres, lembrando que para cada software tem uma sessão listando e explicando como instalar no site correspondente, algo que não focarei nessa parte.
 
-Por se tratar de vários projetos não iremos levantar cada contêiner separadamente, iremos utilizar o docker-compose. Além disso criei um [repositório](https://github.com/guibeira/media-server) com os um MakeFile para ajudar o setup, então vamos usar-lo.
+Por se tratar de vários projetos não iremos levantar cada contêiner separadamente, iremos utilizar o docker-compose. Além disso, criei um repositório com um MakeFile para ajudar o setup, então vamos usar.
 
-Clone o projeto usando git
+Clone o projeto usando git.
 
 ```bash
 git clone https://github.com/guibeira/media-server.git
@@ -112,11 +112,11 @@ media-server
 └── qbittorrentvpn.env
 ```
 
-Antes de iniciar os serviços, vamos adicionar algumas informações para nossos programas. O Plex tem que de alguma forma saber que a instância do programa que você esta subindo lhe pertence, algo parecido quando você vai logar pela primeira vez na sua conta da netflix em sua televisão. O plex disponibiliza esse site [https://www.plex.tv/claim/](https://www.plex.tv/claim/) assim que estiver logado ele gera um código.
+Antes de iniciar os serviços, vamos adicionar algumas informações para nossos programas. O Plex tem que de alguma forma saber que a instância do programa que você esta subindo lhe pertence, algo parecido quando você entrar pela primeira vez na sua conta da netflix em sua televisão. O plex disponibiliza esse site [https://www.plex.tv/claim/](https://www.plex.tv/claim/) assim que estiver logado ele gera um código.
 
 {{< figure src="/images/media_server/plex_claim.png" alt="" >}}
 
-copie ele e altere o arquivo plex.env, no meu caso dessa maneira.
+Copie ele e altere o arquivo plex.env, no meu caso dessa maneira.
 
 ```bash
 PLEX_CLAIM=claim-BqrTpZ9bxtiyxR8D6pNZ
@@ -132,7 +132,7 @@ make setup
 
 O comando setup criar todas as pastas necessárias de configurações e a pasta download,  
 
-Além disso ele já via subir todos os contêineres.
+Além disso, ele já via subir todos os contêineres.
 
 ## Configurando os programas
 
@@ -150,7 +150,7 @@ Usuário : admin
 
 Senha: adminadmin
 
-Após entrar, alteraremos a pasta padrão para donwloads, para isso clique no ícone da engrenagem na barra superior.
+Após entrar, alteraremos a pasta padrão para downloads, para isso clique no ícone da engrenagem na barra superior
 
 {{< figure src="/images/media_server/q_config.png" alt="" >}}
 
@@ -166,9 +166,8 @@ role para baixo e clique em salvar.
 
 {{< figure src="/images/media_server/q_save.png" alt="" >}}
 
-Essa configurações são importantes pois elas que jogaram os arquivos para a pasta correta baseado na categoria que cadastraremos no `radarr` e `sonarr`.
+Essas configurações são importantes, pois elas que jogaram os arquivos para a pasta correta baseado na categoria que cadastraremos no `radarr` e `sonarr`.
 
-Pronto! 
 
 ### Jacket
 
@@ -197,7 +196,6 @@ Dito isso, comecemos  com o `Radar` conectando o nosso cliente de torrente, o `q
 acesse [http://localhost:7878](http://localhost:7878/) e clique em `settings`, depois em `Download Clients` .
 
 {{< figure src="/images/media_server/r_download_client.png" alt="" >}}
-![Untitled](Criando%20uma%20netflix%20particular%20aeb2863131064cdb9df9f62db2d048f8/Untitled%2018.png)
 
 Clique no `+` e selecione qbittorrent
 
@@ -272,12 +270,12 @@ Acesse o radar e clique em `Add new` procure pelo filme que deseja baixar
 
 {{< figure src="/images/media_server/new_movie.png" alt="" >}}
 
-selecione a pasta clique em `add new path` e selecione `dowloads/movies` esse passo se dará apenas dessa vez, nos proximos apenas selecionar a pasta. Feito isso clique em `Add new`
+Selecione a pasta, clique em `add new path` e selecione `dowloads/movies` esse passo se dará apenas dessa vez, nos próximos apenas selecionar a pasta. Feito isso clique em `Add new`
  
 
 {{< figure src="/images/media_server/new_movie_settings.png" alt="" >}}
 
-Assim que adicionar o vai verificar que esse filme já foi lançado e não se encontra no seu HD. Logo ele chamará os indices que você cadastrou e caso algum indice encontre algo ele vai devolver o magnet link, e então repassará para o cliente de torrent que por sua vez baixará o arquivo.
+Assim que adicionar o vai verificar que esse filme já foi lançado e não se encontra no seu HD. Logo ele chamará os índices que você cadastrou e caso algum índice encontre algo ele vai devolver o magnet link, e então repassará para o cliente de torrente que por sua vez baixará o arquivo.
 
 Caso ele encontre no menu lateral em queue vai aparecer que o filme esta sendo baixado
 
@@ -287,7 +285,7 @@ Se quiser mais detalhes você pode acessar o `qbittorrent` em [http://localhost:
 
 ## Baixando a primeira série:
 
-Depois de ter configurado, acesse [http://localhost:8989/](http://localhost:8989/add/new). O Processo é igual ao radarr, mas diferente note que a primeira vez que foi adicionar terá que selecionar a pasta `/downloads/television` 
+Após ter configurado o sonarr, acesse [http://localhost:8989/](http://localhost:8989/add/new). O Processo é igual ao radarr, mas note que a primeira vez que for adicionar terá que selecionar a pasta `/downloads/television` 
 
 {{< figure src="/images/media_server/sonarr_folder.png" alt="" >}}
 
@@ -303,9 +301,9 @@ Como seu servidor esta ligado na internet você poderá instalar o app na sua TV
 
 {{< figure src="/images/media_server/plex_dashboard.png" alt="" >}}
 
-Uma coisa legal do raddar e sonarr é a posibilidade de ser notificado via telegram, mas isso é para um futuro update desse post
+Uma coisa legal do raddar e sonarr é a possibilidade de ser notificado via telegram, mas isso é para um futuro update desse post.
 
-Pronto temos configurado nosso servidor de midia, sempre que quisermos adicionar um filme temos apenas que acessar o `radarr` e para séries o `sonarr`.
+Pronto temos configurado nosso servidor de mídia, sempre que quisermos adicionar um filme temos apenas que acessar o `radarr` e para séries o `sonarr`.
 
 Lembrando que é sempre recomendado usar uma VPN se proteger, caso tenha interesse em aplicar a VPN apenas no qbitorrent de uma olhada do readme do projeto.
 
