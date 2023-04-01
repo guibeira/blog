@@ -6,6 +6,7 @@ languageCode = "pt-br"
 defaultContentLanguage = "pt-br"
 
 paginate = 20
+canonifyURLs = true
 
 pygmentsstyle = "bw"
 pygmentscodefences = true
