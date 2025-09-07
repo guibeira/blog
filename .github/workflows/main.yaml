@@ -25,6 +25,9 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@v4
 
+      - name: ⚡ Cache dependências Rust
+        uses: Swatinem/rust-cache@v2
+
       - name: Install marmite 🫙
         run: cargo install marmite
 
