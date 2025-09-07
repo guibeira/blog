@@ -1,0 +1,73 @@
+name: Guibeira.dev
+tagline: Rust, Python and self-hosting stuff 
+url: 'guibeira.dev'
+https: null
+footer: <div>Powered by <a href="https://github.com/rochacbruno/marmite">Marmite</a> | <small><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY_NC-SA</a></small></div>
+language: ''
+pagination: 10
+pages_title: Pages
+archives_title: Archive
+archives_content_title: Posts from '$year'
+streams_title: Streams
+streams_content_title: Posts from '$stream'
+projects_title: Projects
+projects_content_title: Posts from '$projects' project
+series_title: Series
+series_content_title: Posts from '$series' series
+default_author: 'guibeira'
+authors_title: Author
+enable_search: true
+enable_related_content: false
+search_title: ''
+content_path: content
+site_path: ''
+templates_path: templates
+static_path: static
+media_path: media
+
+# Series display name mappings
+series:
+  python-tutorial:
+    display_name: "Python Tutorial"
+    description: "A comprehensive Python programming tutorial series"
+# Series display name mappings
+projects:
+  amigosecreto:
+    display_name: "Amigo Secreto"
+    description: "A simple Secret Santa web app to create and manage your gift exchanges."
+
+card_image: ./content/media/profile.jpeg
+banner_image: ''
+logo_image: ''
+default_date_format: '%b %e, %Y'
+menu:
+- - Projects
+  - projects.html
+# - - Archive
+#   - archive.html
+- - Github
+  - https://github.com/guibeira/
+- - LinkedIn
+  - https://www.linkedin.com/in/guilherme-beira/
+authors:
+  guibeira:
+    name: Guilherme Beira
+    avatar: https://github.com/guibeira.png
+    bio: Creating new thing in Rust, Python and JS. Open Source enthusiast.
+    links:
+      - ["Fediverse", "https://go.rocha.social/@bruno"]
+      - ["Github", "https://github.com/rochacbruno"]
+      - ["Linkedin", "https://www.linkedin.com/in/rochacbruno/"]
+      - ["Links", "https://bruno.rocha.social"]
+streams: {}
+toc: true
+json_feed: false
+show_next_prev_links: true
+publish_md: false
+source_repository: null
+image_provider: null
+markdown_parser: null
+theme: null
+extra:
+  colorscheme_toggle: true
+  colorscheme: solarized
