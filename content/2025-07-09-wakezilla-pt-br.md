@@ -17,7 +17,7 @@ extra:
 ### Introdução
 
 Há algum tempo, comecei a explorar o mundo do self-hosting, e como isso é viciante, você sempre se pega pensando em quais novos serviços poderia hospedar. Tenho uma máquina bem simples, um Intel I3 de quarta geração, com uma placa de vídeo RTX 1650 de 4gb, ou seja, não consome muita energia. 
-Sabendo que minha placa era subutilizada, decidi instalar o [Ollama](https://ollama.com), uma ferramenta que permite rodar modelos de IA localmente, e após conseguir testar o Ollama, logo percebi que 4gb não era suficiente para rodar os modelos mais recentes. 
+Sabendo que minha placa era sub utilizada, decidi instalar o [Ollama](https://ollama.com), uma ferramenta que permite rodar modelos de IA localmente, e após conseguir testar o Ollama, logo percebi que 4gb não era suficiente para rodar os modelos mais recentes. 
 
 ### Upgrade de hardware
 
@@ -62,8 +62,8 @@ sequenceDiagram
 
 ### Quando desligar o servidor? 
 
-Agora que temos a habilidade de ligar o servidor remotamente, precisamos pensar em quando desligar o servidor.
-Não quero deixar o servidor ligado 24/7, então pensei, já que estamos interceptando o tráfego, podemos monitorar, e quando não houver mais nenhum requeste, desligar o servidor. Assim, adicionamos a configuração de requestes por minuto, e quando não houver mais requisições, podemos desligar o servidor.
+Agora que temos a habilidade de ligar o servidor remotamente, precisamos pensar em quando desligar.
+Não quero deixar a máquina ligada 24/7, então pensei, já que estamos interceptando o tráfego, podemos monitorar, e quando não houver mais nenhum requeste, desligar o servidor. Assim, adicionamos a configuração de requestes por minuto, e quando não houver mais requisições, podemos desligar o servidor.
 
 
 ### Como fazer isso?
