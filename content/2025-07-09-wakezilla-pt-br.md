@@ -21,7 +21,7 @@ Sabendo que minha placa era sub utilizada, decidi instalar o [Ollama](https://ol
 
 ### Upgrade de hardware
 
-Com esse novo problema, agora tinha a desculpa perfeita para fazer o upgrade da minha outra máquina, a que eu uso para jogos. Após muita pesquisa, acabou que consegui um bom negócio em uma RX7900xtx, e com isso, agora tenho 24gb para rodar os modelos mais recentes. Mas me surpreendi com seu consumo, facilmente consumindo mais de 300 watts. O que levantou um alerta, deixar essa máquina ligada 24/7 não seria nada eficiente em termos de consumo de energia.  
+Com esse novo problema, agora tinha a desculpa perfeita para fazer o upgrade da minha outra máquina, a que eu uso para jogos. Após muita pesquisa, acabou que consegui um bom negócio em uma RX7900xtx, e com isso, agora tenho 24gb para rodar os modelos mais recentes. Mas me surpreendi com seu consumo, facilmente consumindo em torno de 45 watts em idle. O que levantou um alerta, deixar essa máquina ligada 24/7 não seria nada eficiente em termos de consumo de energia.  
 
 ### Ideia inicial
 

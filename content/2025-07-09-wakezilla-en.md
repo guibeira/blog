@@ -23,7 +23,7 @@ Since my GPU was underused, I decided to install [Ollama](https://ollama.com), a
 
 ### Hardware Upgrade
 
-With this new problem, I now had the perfect excuse to upgrade my other machine the one I use for gaming. After a lot of research, I managed to get a good deal on an RX 7900 XTX. Now I have 24GB to run the latest models. But I was surprised by its power consumption, easily pulling over 300 watts. This raised a red flag: keeping this machine on 24/7 would be far from energy-efficient.
+With this new problem, I now had the perfect excuse to upgrade my other machine the one I use for gaming. After a lot of research, I managed to get a good deal on an RX 7900 XTX. Now I have 24GB to run the latest models. But I was surprised by its power consumption, easily pulling around 45 watts in idle. This raised a red flag: keeping this machine on 24/7 would be far from energy-efficient.
 
 ### Initial Idea
 
