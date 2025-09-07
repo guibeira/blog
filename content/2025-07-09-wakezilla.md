@@ -4,7 +4,8 @@ date: 2025-07-09
 author: guibeira
 tags: rust,self-host
 projects: amigo-secreto
-card_image: /images/posts/wakezilla.png
+card_image: media/posts/wakezilla/wakezilla.png
+banner_image: media/posts/wakezilla/wakezilla.png
 extra:
   mermaid: true
   mermaid_theme: default
