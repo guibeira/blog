@@ -16,7 +16,7 @@ extra:
 
 ### Introdução
 
-Há algum tempo, comecei a explorar o mundo do self-hosting, e como isso é viciante, você sempre se pega pensando em quais novos serviços poderia hospedar. Tenho uma máquina bem simples, um Intel I3 de quarta geração, com uma placa de vídeo RTX 1650 de 4gb, ou seja, não consome muita energia. 
+Há algum tempo, comecei a explorar o mundo do self-hosting, e como isso é viciante, você sempre se pega pensando em quais novos serviços poderia hospedar. Tenho uma máquina bem simples, um Intel I3 de quarta geração, com uma placa de vídeo GTX 1650 de 4gb, ou seja, não consome muita energia. 
 Sabendo que minha placa era sub utilizada, decidi instalar o [Ollama](https://ollama.com), uma ferramenta que permite rodar modelos de IA localmente, e após conseguir testar o Ollama, logo percebi que 4gb não era suficiente para rodar os modelos mais recentes. 
 
 ### Upgrade de hardware

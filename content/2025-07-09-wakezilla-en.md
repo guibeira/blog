@@ -17,7 +17,7 @@ extra:
 
 ### Introduction
 
-Some time ago, I started exploring the world of self-hosting, and since it’s so addictive, you always find yourself thinking about which new services you could host. I have a pretty simple machine, an Intel i3 (4th gen) with an RTX 1650 4GB GPU not too power-hungry.
+Some time ago, I started exploring the world of self-hosting, and since it’s so addictive, you always find yourself thinking about which new services you could host. I have a pretty simple machine, an Intel i3 (4th gen) with an GTX 1650 4GB GPU not too power-hungry.
 
 Since my GPU was underused, I decided to install [Ollama](https://ollama.com), a tool that allows running AI models locally. After testing Ollama, I quickly realized that 4GB wasn’t enough to run the latest models.
 
