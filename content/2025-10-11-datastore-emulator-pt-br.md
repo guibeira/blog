@@ -14,7 +14,7 @@ extra:
 
 ### Introdução: O Problema com o Datastore Emulator
 
-Quem trabalha com o Google Datastore em ambientes locais provavelmente já se deparou com a seguinte situação: o emulador começa leve, mas, com o tempo, vira um [monstro](https://github.com/googleapis/python-datastore/issues/582#event-15802729926) de memória. E o pior — ele adora corromper seus arquivos de dados quando você menos espera.
+Quem trabalha com o Google Datastore em ambientes locais provavelmente já se deparou com a seguinte situação: o emulador começa leve, mas, com o tempo, vira um [monstro](https://github.com/googleapis/python-datastore/issues/582#event-15802729926) de memória. E o pior, ele adora corromper seus arquivos de dados quando você menos espera.
 
 No nosso time, o Datastore é parte crítica do stack. Apesar de ser um banco NoSQL poderoso, o emulador local não acompanhava nosso ritmo. Com dumps grandes, a performance despencava e o risco de corromper o banco aumentava. A cada novo dia de desenvolvimento, a mesma rotina: limpar, restaurar, rezar para não quebrar de novo.
 
@@ -27,7 +27,7 @@ Inicialmente, diminuímos o tamanho do backup, o que funcionava por um período,
 
 Diante da decisão de criar um emulador alternativo, comecei pelo ponto mais importante: entender como o Datastore se comunica.
 
-Felizmente, o Google disponibiliza os [protobufs](https://github.com/googleapis/googleapis/blob/c98457cd51f80e56daf7de102ed8d4c347ada663/google/datastore/v1/entity.proto), utilizados na API do Datastore. Isso inclui as mensagens, serviços e métodos expostos pela API gRPC padrão, como:
+Felizmente, o Google disponibiliza os [protobufs](https://github.com/googleapis/googleapis/blob/c98457cd51f80e56daf7de102ed8d4c347ada663/google/datastore/v1/datastore.proto), utilizados na API do Datastore. Isso inclui as mensagens, serviços e métodos expostos pela API gRPC padrão, como:
 - Lookup
 - RunQuery
 - BeginTransaction
@@ -119,6 +119,4 @@ O resultado final foi um binário com cerca de 10MB de tamanho, mais rápido e m
 
 Um passo importante para ter paridade de features é a implementação de endpoints HTTP para facilitar o uso de clientes web como o [dsasmin](https://github.com/remko/dsadmin). Isso está na minha lista de próximos passos, assim como melhorar a cobertura de testes e adicionar mais features conforme necessário. 
 
-
-
-
+Se quiser testar, o projeto está disponível no GitHub: [Datastore Emulator](https://github.com/guibeira/datastore-emulator)
